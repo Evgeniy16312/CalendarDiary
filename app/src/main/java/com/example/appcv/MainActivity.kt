@@ -15,7 +15,7 @@ import io.realm.RealmResults
 import java.util.*
 
 class MainActivity : AppCompatActivity() {
-    lateinit var recyclerView: RecyclerView
+
     lateinit var realm: Realm
     lateinit var eventsRV: RecyclerView
 
@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         eventsRV = findViewById(R.id.eventsRV)
 
         val calendar: CalendarView = findViewById(R.id.calendarView)
-        calendar.setOnDateChangeListener { view, year, month, dayOfMonth ->
+        calendar.setOnDateChangeListener { _, year, month, dayOfMonth ->
             val selectedDay = Calendar.getInstance()
             selectedDay.set(Calendar.YEAR, year)
             selectedDay.set(Calendar.MONTH, month)

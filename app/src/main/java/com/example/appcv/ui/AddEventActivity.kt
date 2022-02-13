@@ -14,7 +14,6 @@ import com.google.gson.Gson
 import io.realm.Realm
 import java.util.*
 
-
 class AddEventActivity : AppCompatActivity() {
 
     private var dayId: Long? = null
@@ -100,7 +99,7 @@ class AddEventActivity : AppCompatActivity() {
     private fun chooseTimeTo() {
         val now = Calendar.getInstance()
         val timePicker = TimePickerDialog(
-            this, TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+            this, { _, hourOfDay, minute ->
                 val selectedTime = Calendar.getInstance()
                 selectedTime.set(Calendar.HOUR_OF_DAY, hourOfDay)
                 selectedTime.set(Calendar.MINUTE, minute)
@@ -115,7 +114,7 @@ class AddEventActivity : AppCompatActivity() {
     private fun chooseTimeFrom() {
         val now = Calendar.getInstance()
         val timePicker = TimePickerDialog(
-            this, TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
+            this, { _, hourOfDay, minute ->
                 val selectedTime = Calendar.getInstance()
                 selectedTime.set(Calendar.HOUR_OF_DAY, hourOfDay)
                 selectedTime.set(Calendar.MINUTE, minute)
@@ -131,7 +130,7 @@ class AddEventActivity : AppCompatActivity() {
         val now = Calendar.getInstance()
         val datePicker = DatePickerDialog(
             this,
-            { view, year, month, dayOfMonth ->
+            { _, year, month, dayOfMonth ->
 
                 val selectedDate = Calendar.getInstance()
                 selectedDate.set(Calendar.YEAR, year)
