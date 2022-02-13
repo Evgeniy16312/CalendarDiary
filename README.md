@@ -9,7 +9,7 @@ Test task from the company SimbirSoft along the track Android: [link](https://di
 ## Tools
 
 - **CalendarView**<br/>
-- **Real DB**<br/>
+- **Realm DB**<br/>
 - **viewBinding**<br/>
 ---
 ## Screenshots
