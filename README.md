@@ -14,6 +14,6 @@ Test task from the company SimbirSoft along the track Android: [link](https://di
 ---
 ## Screenshots
 
-Main screen | User information
+Main screen calendar | Add Event screen
 ---|---
 
